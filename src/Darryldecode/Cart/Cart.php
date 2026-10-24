@@ -688,6 +688,16 @@ class Cart
     }
 
     /**
+     * check if cart has more than one distinct item line
+     *
+     * @return bool
+     */
+    public function hasMultipleItems()
+    {
+        return $this->getContent()->count() > 1;
+    }
+
+    /**
      * validate Item data
      *
      * @param $item
